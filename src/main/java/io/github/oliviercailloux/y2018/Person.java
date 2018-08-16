@@ -65,12 +65,9 @@ public class Person {
 	/**
 	 * Short constructor by design. Use setters to complete the object.
 	 * 
-	 * @param id
-	 *            int
-	 * @param firstname
-	 *            String
-	 * @param lastname
-	 *            String
+	 * @param id        int
+	 * @param firstname String
+	 * @param lastname  String
 	 */
 	public Person(int id, String firstname, String lastname) {
 		super();
@@ -267,8 +264,7 @@ public class Person {
 	}
 
 	/**
-	 * @param jsonPerson
-	 *            : String
+	 * @param jsonPerson : String
 	 * @return Object : Person
 	 */
 	public static Person fromJson(String jsonPersonne) {

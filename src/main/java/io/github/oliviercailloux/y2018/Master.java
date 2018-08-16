@@ -84,8 +84,7 @@ public class Master {
 	}
 
 	/**
-	 * @param jsonMaster
-	 *            : String
+	 * @param jsonMaster : String
 	 * @return Object : Master not null
 	 */
 	public static Master fromJson(String jsonbMaster) {

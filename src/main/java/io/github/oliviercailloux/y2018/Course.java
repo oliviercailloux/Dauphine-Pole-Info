@@ -159,8 +159,7 @@ public class Course {
 	}
 
 	/**
-	 * @param jsonCours
-	 *            is not null nor empty
+	 * @param jsonCours is not null nor empty
 	 * @return Object : Cours not null
 	 * 
 	 */

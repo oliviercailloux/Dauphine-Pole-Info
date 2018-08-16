@@ -76,8 +76,7 @@ public class Role {
 
 	/**
 	 * 
-	 * @param jsonRole
-	 *            : String
+	 * @param jsonRole : String
 	 * @return Role not null
 	 */
 	public static Role fromJson(String jsonRole) {

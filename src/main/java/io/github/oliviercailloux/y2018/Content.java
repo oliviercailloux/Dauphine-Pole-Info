@@ -182,8 +182,7 @@ public class Content {
 	}
 
 	/**
-	 * @param jsonContenu
-	 *            : String
+	 * @param jsonContenu : String
 	 * @return Object : Contenu not null
 	 */
 	public static Content jsonToContenu(String jsonbContenu) {

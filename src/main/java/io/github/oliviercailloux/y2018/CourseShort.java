@@ -95,8 +95,7 @@ public class CourseShort {
 	}
 
 	/**
-	 * @param jsonCours
-	 *            :String
+	 * @param jsonCours :String
 	 * @return Object : CourseShort not null
 	 */
 	public static CourseShort fromJson(String jsonbCourseShort) {
