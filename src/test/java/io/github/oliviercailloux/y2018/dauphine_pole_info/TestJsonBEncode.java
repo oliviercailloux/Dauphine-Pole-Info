@@ -1,39 +1,23 @@
 package io.github.oliviercailloux.y2018.dauphine_pole_info;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.Optional;
-import java.util.Scanner;
-
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
-import javax.json.bind.JsonbConfig;
 
 import org.junit.jupiter.api.Test;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import sun.misc.ClassLoaderUtil;
-
-
 public class TestJsonBEncode {
-	
+
 	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory.getLogger(TestJsonBEncode.class);
-	
+
 	@Test
 	public void TestEncodePersonToJson() throws Exception {
-		String res="";
+		String res = "";
 		Person per = new Person();
 		per.setFirstname("lahsen");
 		per.setLastname("jannani");
@@ -44,19 +28,20 @@ public class TestJsonBEncode {
 		BufferedReader in = new BufferedReader(new InputStreamReader(fileUrl.openStream()));
 		String inputLine;
 		while ((inputLine = in.readLine()) != null) {
-			 res+=inputLine+"\n";
+			res += inputLine + "\n";
 		}
 		int truncateIndex = res.length();
 		truncateIndex = res.lastIndexOf('\n', truncateIndex - 1);
 		String ressub = res.substring(0, truncateIndex);
-		in.close();	
-		String result=per.toJson();
-		assertEquals(result,ressub);
-		
+		in.close();
+		String result = per.toJson();
+		assertEquals(result, ressub);
+
 	}
+
 	@Test
 	public void TestEncodeContentToJson() throws Exception {
-		String res="";
+		String res = "";
 		Content cont = new Content();
 		cont.setName("name");
 		cont.setHourlyVolume(356);
@@ -66,19 +51,19 @@ public class TestJsonBEncode {
 		BufferedReader in = new BufferedReader(new InputStreamReader(fileUrl.openStream()));
 		String inputLine;
 		while ((inputLine = in.readLine()) != null) {
-			 res+=inputLine+"\n";
+			res += inputLine + "\n";
 		}
 		int truncateIndex = res.length();
 		truncateIndex = res.lastIndexOf('\n', truncateIndex - 1);
 		String ressub = res.substring(0, truncateIndex);
-		in.close();	
-		String result2=cont.toJson();
-		assertEquals(result2,ressub);
-		}
-	
+		in.close();
+		String result2 = cont.toJson();
+		assertEquals(result2, ressub);
+	}
+
 	@Test
 	public void TestEncodeMasterToJson() throws Exception {
-		String res="";
+		String res = "";
 		Master mast = new Master();
 		mast.setName("name");
 		mast.setDescription("master");
@@ -86,16 +71,14 @@ public class TestJsonBEncode {
 		BufferedReader in = new BufferedReader(new InputStreamReader(fileUrl.openStream()));
 		String inputLine;
 		while ((inputLine = in.readLine()) != null) {
-			 res+=inputLine+"\n";
+			res += inputLine + "\n";
 		}
 		int truncateIndex = res.length();
 		truncateIndex = res.lastIndexOf('\n', truncateIndex - 1);
 		String ressub = res.substring(0, truncateIndex);
-		in.close();	
-		String result2=mast.toJson();
-		assertEquals(result2,ressub);
-		}
-	
+		in.close();
+		String result2 = mast.toJson();
+		assertEquals(result2, ressub);
 	}
 
-
+}
